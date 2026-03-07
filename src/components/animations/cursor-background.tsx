@@ -1,16 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion, useSpring } from "framer-motion";
 
 export function CursorBackground() {
-    const [isMounted, setIsMounted] = useState(false);
-
     const mouseX = useSpring(0, { stiffness: 50, damping: 20 });
     const mouseY = useSpring(0, { stiffness: 50, damping: 20 });
 
     useEffect(() => {
-        setIsMounted(true);
         const handleMouseMove = (e: MouseEvent) => {
             mouseX.set(e.clientX);
             mouseY.set(e.clientY);
@@ -19,8 +16,6 @@ export function CursorBackground() {
         window.addEventListener("mousemove", handleMouseMove);
         return () => window.removeEventListener("mousemove", handleMouseMove);
     }, [mouseX, mouseY]);
-
-    if (!isMounted) return null;
 
     return (
         <motion.div

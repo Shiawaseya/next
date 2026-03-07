@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import { CursorBackground } from "@/components/animations/cursor-background";
+import { StarsBackground } from "@/components/animations/stars-background";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useDir } from "@/components/dir-provider";
@@ -10,7 +10,7 @@ import { Sun, Moon, Languages } from "lucide-react";
 
 export function HeroSection() {
     const { theme, setTheme } = useTheme();
-    const { isRtl, toggleRtl } = useDir();
+    const { toggleRtl } = useDir();
 
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -34,7 +34,9 @@ export function HeroSection() {
 
     return (
         <>
-            <CursorBackground />
+            <div className="absolute inset-0 w-full h-full pointer-events-none">
+                <StarsBackground />
+            </div>
 
             {/* Top Navigation / Controls */}
             <header className="absolute top-0 w-full p-6 flex justify-between items-center z-20">
@@ -66,7 +68,7 @@ export function HeroSection() {
             </header>
 
             {/* Main Hero Content */}
-            <div className="flex-1 flex items-center justify-center relative z-10 px-4 sm:px-6 lg:px-8 pt-20">
+            <div className="flex-1 flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-20">
                 <motion.div
                     className="max-w-4xl mx-auto text-center"
                     variants={containerVariants}
