@@ -1,0 +1,1331 @@
+﻿
+> next-dashboard-boilerplate@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+node.exe : Error: Can't resolve 
+'tw-animate-css' in 'C:\Users\Ge
+rald\Desktop\anti\next-dashboard
+-boilerplate\src\app'
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo          : N 
+   otSpecified: (Error: Can't   
+  re...rplate\src\app':String   
+ ) [], RemoteException
+    + FullyQualifiedErrorId : N 
+   ativeCommandError
+ 
+    [2m[at 
+finishWithoutResolve (C:\Users\G
+erald\Desktop\anti\next-dashboar
+d-boilerplate\node_modules\enhan
+ced-resolve\lib\Resolver.js:586:
+18)][0m
+    [2m[at C:\Users\Gerald\Desk
+top\anti\next-dashboard-boilerpl
+ate\node_modules\enhanced-resolv
+e\lib\Resolver.js:678:14][0m
+    [2m[at C:\Users\Gerald\Desk
+top\anti\next-dashboard-boilerpl
+ate\node_modules\enhanced-resolv
+e\lib\Resolver.js:739:5][0m
+    [2m[at eval (eval at 
+create (C:\Users\Gerald\Desktop\
+anti\next-dashboard-boilerplate\
+node_modules\tapable\lib\HookCod
+eFactory.js:31:10), 
+<anonymous>:15:1)][0m
+    [2m[at C:\Users\Gerald\Desk
+top\anti\next-dashboard-boilerpl
+ate\node_modules\enhanced-resolv
+e\lib\Resolver.js:739:5][0m
+    [2m[at eval (eval at 
+create (C:\Users\Gerald\Desktop\
+anti\next-dashboard-boilerplate\
+node_modules\tapable\lib\HookCod
+eFactory.js:31:10), 
+<anonymous>:27:1)][0m
+    [2m[at C:\Users\Gerald\Desk
+top\anti\next-dashboard-boilerpl
+ate\node_modules\enhanced-resolv
+e\lib\DescriptionFilePlugin.js:8
+9:43][0m
+    [2m[at C:\Users\Gerald\Desk
+top\anti\next-dashboard-boilerpl
+ate\node_modules\enhanced-resolv
+e\lib\Resolver.js:739:5][0m
+    [2m[at eval (eval at 
+create (C:\Users\Gerald\Desktop\
+anti\next-dashboard-boilerplate\
+node_modules\tapable\lib\HookCod
+eFactory.js:31:10), 
+<anonymous>:15:1)][0m
+    [2m[at C:\Users\Gerald\Desk
+top\anti\next-dashboard-boilerpl
+ate\node_modules\enhanced-resolv
+e\lib\Resolver.js:739:5][0m {
+  details: "resolve 
+'tw-animate-css' in 'C:\\Users\\
+Gerald\\Desktop\\anti\\next-dash
+board-boilerplate\\src\\app'\n" 
++
+    '  Parsed request is a 
+module\n' +
+    '  using description file: C
+:\\Users\\Gerald\\Desktop\\anti\
+\next-dashboard-boilerplate\\pac
+kage.json (relative path: 
+./src/app)\n' +
+    '    resolve as module\n' +
+    "      C:\\Users\\Gerald\\De
+sktop\\anti\\next-dashboard-boil
+erplate\\src\\app\\node_modules 
+doesn't exist or is not a 
+directory\n" +
+    "      C:\\Users\\Gerald\\De
+sktop\\anti\\next-dashboard-boil
+erplate\\src\\node_modules 
+doesn't exist or is not a 
+directory\n" +
+    '      looking for modules 
+in C:\\Users\\Gerald\\Desktop\\a
+nti\\next-dashboard-boilerplate\
+\node_modules\n' +
+    '        single file 
+module\n' +
+    '          using 
+description file: C:\\Users\\Ger
+ald\\Desktop\\anti\\next-dashboa
+rd-boilerplate\\package.json 
+(relative path: ./node_modules/t
+w-animate-css)\n' +
+    '            no 
+extension\n' +
+    "              C:\\Users\\Ge
+rald\\Desktop\\anti\\next-dashbo
+ard-boilerplate\\node_modules\\t
+w-animate-css doesn't exist\n" +
+    '            .css\n' +
+    "              C:\\Users\\Ge
+rald\\Desktop\\anti\\next-dashbo
+ard-boilerplate\\node_modules\\t
+w-animate-css.css doesn't 
+exist\n" +
+    "        C:\\Users\\Gerald\\
+Desktop\\anti\\next-dashboard-bo
+ilerplate\\node_modules\\tw-anim
+ate-css doesn't exist\n" +
+    "      C:\\Users\\Gerald\\De
+sktop\\anti\\node_modules 
+doesn't exist or is not a 
+directory\n" +
+    "      C:\\Users\\Gerald\\De
+sktop\\node_modules doesn't 
+exist or is not a directory\n" +
+    "      
+C:\\Users\\Gerald\\node_modules 
+doesn't exist or is not a 
+directory\n" +
+    "      
+C:\\Users\\node_modules doesn't 
+exist or is not a directory\n" +
+    "      C:\\node_modules 
+doesn't exist or is not a 
+directory"
+}
+
+> Build error occurred
+Error: Turbopack build failed 
+with 11 errors:
+./src/app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: C:\
+Users\Gerald\Desktop\anti\next-d
+ashboard-boilerplate\src\app\glo
+bals.css:1:1: Can't resolve 
+'tw-animate-css' in 'C:\Users\Ge
+rald\Desktop\anti\next-dashboard
+-boilerplate\src\app'
+    at Input.error (node_modules
+/postcss/lib/input.js:135:16) [C
+:\Users\Gerald\Desktop\anti\next
+-dashboard-boilerplate\.next\bui
+ld\chunks\node_modules_fe693df6.
+_.js:4651:22]
+    at Root.error (node_modules/
+postcss/lib/node.js:146:32) [C:\
+Users\Gerald\Desktop\anti\next-d
+ashboard-boilerplate\.next\build
+\chunks\node_modules_fe693df6._.
+js:928:38]
+    [at Object.Once (C:\Users\Ge
+rald\Desktop\anti\next-dashboard
+-boilerplate\node_modules\@tailw
+indcss\postcss\dist\index.js:10:
+6913)]
+    [at process.processTicksAndR
+ejections (node:internal/process
+/task_queues:103:5)]
+    at async 
+LazyResult.runAsync (node_module
+s/postcss/lib/lazy-result.js:293
+:11) [C:\Users\Gerald\Desktop\an
+ti\next-dashboard-boilerplate\.n
+ext\build\chunks\node_modules_fe
+693df6._.js:6214:21]
+    at async transform (turbopac
+k:///[turbopack-node]/transforms
+/postcss.ts:70:34) [C:\Users\Ger
+ald\Desktop\anti\next-dashboard-
+boilerplate\.next\build\chunks\[
+root-of-the-server]__51225daf._.
+js:146:36]
+    at async run (turbopack:///[
+turbopack-node]/ipc/evaluate.ts:
+92:23) [C:\Users\Gerald\Desktop\
+anti\next-dashboard-boilerplate\
+.next\build\chunks\[root-of-the-
+server]__974941ed._.js:443:31]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css 
+[Client Component Browser]
+    ./src/app/layout.tsx 
+[Server Component]
+
+
+./src/components/ui/button.tsx:3
+:1
+Module not found: Can't resolve 
+'@base-ui/react/button'
+[0m [90m 1 |[39m [32m"use 
+client"[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39m[90m 3 
+|[39m [36mimport[39m { 
+[33mButton[39m [36mas[39m 
+[33mButtonPrimitive[39m } 
+[36mfrom[39m [32m"@base-ui/re
+act/button"[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m
+ [90m 4 |[39m 
+[36mimport[39m { 
+cva[33m,[39m type 
+[33mVariantProps[39m } 
+[36mfrom[39m [32m"class-varia
+nce-authority"[39m
+ [90m 5 |[39m
+ [90m 6 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m 
+[32m"@/lib/utils"[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    
+./src/components/ui/button.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    
+./src/components/ui/button.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+./src/components/ui/button.tsx:4
+:1
+Module not found: Can't resolve 
+'@base-ui/react/button'
+[0m [90m 2 |[39m
+ [90m 3 |[39m 
+[36mimport[39m { c 
+[36mas[39m _c } 
+[36mfrom[39m [32m"react/compi
+ler-runtime"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 
+|[39m [36mimport[39m { 
+[33mButton[39m [36mas[39m 
+[33mButtonPrimitive[39m } 
+[36mfrom[39m [32m"@base-ui/re
+act/button"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m
+ [90m 5 |[39m 
+[36mimport[39m { 
+cva[33m,[39m type 
+[33mVariantProps[39m } 
+[36mfrom[39m [32m"class-varia
+nce-authority"[39m[33m;[39m
+ [90m 6 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m [32m"@/lib/utils
+"[39m[33m;[39m
+ [90m 7 |[39m [36mconst[39m 
+buttonVariants [33m=[39m 
+cva([32m"group/button 
+inline-flex shrink-0 
+items-center justify-center 
+rounded-lg border 
+border-transparent 
+bg-clip-padding text-sm 
+font-medium whitespace-nowrap 
+transition-all outline-none 
+select-none 
+focus-visible:border-ring 
+focus-visible:ring-3 
+focus-visible:ring-ring/50 
+disabled:pointer-events-none 
+disabled:opacity-50 
+aria-invalid:border-destructive 
+aria-invalid:ring-3 aria-invalid
+:ring-destructive/20 dark:aria-i
+nvalid:border-destructive/50 dar
+k:aria-invalid:ring-destructive/
+40 [&_svg]:pointer-events-none 
+[&_svg]:shrink-0 [&_svg:not([cla
+ss*='size-'])]:size-4"[39m[33m
+,[39m {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    
+./src/components/ui/button.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    
+./src/components/ui/button.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+./src/components/ui/sheet.tsx:4:
+1
+Module not found: Can't resolve 
+'@base-ui/react/dialog'
+[0m [90m 2 |[39m
+ [90m 3 |[39m 
+[36mimport[39m [33m*[39m 
+[36mas[39m [33mReact[39m 
+[36mfrom[39m [32m"react"[39m
+[31m[1m>[22m[39m[90m 4 
+|[39m [36mimport[39m { 
+[33mDialog[39m [36mas[39m 
+[33mSheetPrimitive[39m } 
+[36mfrom[39m [32m"@base-ui/re
+act/dialog"[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m 
+[32m"@/lib/utils"[39m
+ [90m 7 |[39m 
+[36mimport[39m { 
+[33mButton[39m } 
+[36mfrom[39m [32m"@/component
+s/ui/button"[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    
+./src/components/ui/sheet.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    
+./src/components/ui/sheet.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+./src/components/ui/sheet.tsx:5:
+1
+Module not found: Can't resolve 
+'@base-ui/react/dialog'
+[0m [90m 3 |[39m 
+[36mimport[39m { c 
+[36mas[39m _c } 
+[36mfrom[39m [32m"react/compi
+ler-runtime"[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m [33m*[39m 
+[36mas[39m [33mReact[39m 
+[36mfrom[39m 
+[32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 
+|[39m [36mimport[39m { 
+[33mDialog[39m [36mas[39m 
+[33mSheetPrimitive[39m } 
+[36mfrom[39m [32m"@base-ui/re
+act/dialog"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m
+ [90m 6 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m [32m"@/lib/utils
+"[39m[33m;[39m
+ [90m 7 |[39m 
+[36mimport[39m { 
+[33mButton[39m } 
+[36mfrom[39m [32m"@/component
+s/ui/button"[39m[33m;[39m
+ [90m 8 |[39m 
+[36mimport[39m { 
+[33mXIcon[39m } 
+[36mfrom[39m [32m"lucide-reac
+t"[39m[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    
+./src/components/ui/sheet.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    
+./src/components/ui/sheet.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+./src/components/ui/input.tsx:2:
+1
+Module not found: Can't resolve 
+'@base-ui/react/input'
+[0m [90m 1 |[39m 
+[36mimport[39m [33m*[39m 
+[36mas[39m [33mReact[39m 
+[36mfrom[39m [32m"react"[39m
+[31m[1m>[22m[39m[90m 2 
+|[39m [36mimport[39m { 
+[33mInput[39m [36mas[39m 
+[33mInputPrimitive[39m } 
+[36mfrom[39m 
+[32m"@base-ui/react/input"[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m
+ [90m 3 |[39m
+ [90m 4 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m 
+[32m"@/lib/utils"[39m
+ [90m 5 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    
+./src/components/ui/input.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    
+./src/components/ui/input.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+./src/components/ui/input.tsx:3:
+1
+Module not found: Can't resolve 
+'@base-ui/react/input'
+[0m [90m 1 |[39m 
+[36mimport[39m { c 
+[36mas[39m _c } 
+[36mfrom[39m [32m"react/compi
+ler-runtime"[39m[33m;[39m
+ [90m 2 |[39m 
+[36mimport[39m [33m*[39m 
+[36mas[39m [33mReact[39m 
+[36mfrom[39m 
+[32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 
+|[39m [36mimport[39m { 
+[33mInput[39m [36mas[39m 
+[33mInputPrimitive[39m } 
+[36mfrom[39m [32m"@base-ui/re
+act/input"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m [32m"@/lib/utils
+"[39m[33m;[39m
+ [90m 5 |[39m 
+[36mfunction[39m 
+[33mInput[39m(t0) {
+ [90m 6 |[39m   
+[36mconst[39m $ [33m=[39m 
+_c([35m10[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    
+./src/components/ui/input.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    
+./src/components/ui/input.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+./src/components/ui/separator.ts
+x:3:1
+Module not found: Can't resolve 
+'@base-ui/react/separator'
+[0m [90m 1 |[39m [32m"use 
+client"[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39m[90m 3 
+|[39m [36mimport[39m { 
+[33mSeparator[39m 
+[36mas[39m 
+[33mSeparatorPrimitive[39m } 
+[36mfrom[39m [32m"@base-ui/re
+act/separator"[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m 
+[32m"@/lib/utils"[39m
+ [90m 6 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ui/separato
+r.tsx [Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./src/components/ui/separato
+r.tsx [Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+./src/components/ui/separator.ts
+x:4:1
+Module not found: Can't resolve 
+'@base-ui/react/separator'
+[0m [90m 2 |[39m
+ [90m 3 |[39m 
+[36mimport[39m { c 
+[36mas[39m _c } 
+[36mfrom[39m [32m"react/compi
+ler-runtime"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 
+|[39m [36mimport[39m { 
+[33mSeparator[39m 
+[36mas[39m 
+[33mSeparatorPrimitive[39m } 
+[36mfrom[39m [32m"@base-ui/re
+act/separator"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m
+ [90m 5 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m [32m"@/lib/utils
+"[39m[33m;[39m
+ [90m 6 |[39m 
+[36mfunction[39m 
+[33mSeparator[39m(t0) {
+ [90m 7 |[39m   
+[36mconst[39m $ [33m=[39m 
+_c([35m10[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ui/separato
+r.tsx [Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./src/components/ui/separato
+r.tsx [Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+./src/components/ui/tooltip.tsx:
+3:1
+Module not found: Can't resolve 
+'@base-ui/react/tooltip'
+[0m [90m 1 |[39m [32m"use 
+client"[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39m[90m 3 
+|[39m [36mimport[39m { 
+[33mTooltip[39m [36mas[39m 
+[33mTooltipPrimitive[39m } 
+[36mfrom[39m [32m"@base-ui/re
+act/tooltip"[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m 
+[32m"@/lib/utils"[39m
+ [90m 6 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    
+./src/components/ui/tooltip.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    
+./src/components/ui/tooltip.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+./src/components/ui/tooltip.tsx:
+4:1
+Module not found: Can't resolve 
+'@base-ui/react/tooltip'
+[0m [90m 2 |[39m
+ [90m 3 |[39m 
+[36mimport[39m { c 
+[36mas[39m _c } 
+[36mfrom[39m [32m"react/compi
+ler-runtime"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 
+|[39m [36mimport[39m { 
+[33mTooltip[39m [36mas[39m 
+[33mTooltipPrimitive[39m } 
+[36mfrom[39m [32m"@base-ui/re
+act/tooltip"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m
+ [90m 5 |[39m 
+[36mimport[39m { cn } 
+[36mfrom[39m [32m"@/lib/utils
+"[39m[33m;[39m
+ [90m 6 |[39m 
+[36mfunction[39m 
+[33mTooltipProvider[39m(t0) {
+ [90m 7 |[39m   
+[36mconst[39m $ [33m=[39m 
+_c([35m6[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    
+./src/components/ui/tooltip.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component Browser]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+  Client Component SSR:
+    
+./src/components/ui/tooltip.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Client Component SSR]
+    ./src/components/animate-ui/
+components/radix/sidebar.tsx 
+[Server Component]
+    
+./src/app/dashboard/layout.tsx 
+[Server Component]
+
+https://nextjs.org/docs/messages
+/module-not-found
+
+
+    at async transform (turbopac
+k:///[turbopack-node]/transforms
+/postcss.ts:70:34) [C:\Users\Ger
+ald\Desktop\anti\next-dashboard-
+boilerplate\.next\build\chunks\[
+root-of-the-server]__51225daf._.
+js:146:36])
+    at async run (turbopack:///[
+turbopack-node]/ipc/evaluate.ts:
+92:23) [C:\Users\Gerald\Desktop\
+anti\next-dashboard-boilerplate\
+.next\build\chunks\[root-of-the-
+server]__974941ed._.js:443:31])
+    at <unknown> (./src/componen
+ts/ui/button.tsx:3:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)
+    at <unknown> (./src/componen
+ts/ui/button.tsx:4:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)
+    at <unknown> (./src/componen
+ts/ui/sheet.tsx:4:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)
+    at <unknown> (./src/componen
+ts/ui/sheet.tsx:5:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)
+    at <unknown> (./src/componen
+ts/ui/input.tsx:2:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)
+    at <unknown> (./src/componen
+ts/ui/input.tsx:3:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)
+    at <unknown> (./src/componen
+ts/ui/separator.tsx:3:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)
+    at <unknown> (./src/componen
+ts/ui/separator.tsx:4:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)
+    at <unknown> (./src/componen
+ts/ui/tooltip.tsx:3:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)
+    at <unknown> (./src/componen
+ts/ui/tooltip.tsx:4:1)
+    at <unknown> (https://nextjs
+.org/docs/messages/module-not-fo
+und)

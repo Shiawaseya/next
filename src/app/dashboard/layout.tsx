@@ -1,8 +1,7 @@
 import { NavigationProvider } from "@/components/navigation/navigation-context"
-import { PrimaryNav } from "@/components/navigation/primary-nav"
-import { SecondaryNav } from "@/components/navigation/secondary-nav"
+import { AppSidebar } from "@/components/navigation/app-sidebar"
 import { TopBar } from "@/components/navigation/top-bar"
-import { MobileNavOverlay } from "@/components/navigation/mobile-nav-overlay"
+import { SidebarProvider, SidebarInset } from "@/components/animate-ui/components/radix/sidebar"
 
 export default function DashboardLayout({
     children,
@@ -11,20 +10,17 @@ export default function DashboardLayout({
 }) {
     return (
         <NavigationProvider>
-            <div className="flex h-full w-full bg-background overflow-hidden relative">
-                <PrimaryNav />
-                <SecondaryNav />
-                <MobileNavOverlay />
-
-                <div className="flex-1 flex flex-col min-w-0 overflow-hidden bg-muted/30">
+            <SidebarProvider>
+                <AppSidebar />
+                <SidebarInset className="bg-muted/30 flex flex-col flex-1 h-screen overflow-hidden">
                     <TopBar />
                     <main className="flex-1 overflow-y-auto p-6 md:p-8 relative">
                         <div className="mx-auto max-w-6xl w-full">
                             {children}
                         </div>
                     </main>
-                </div>
-            </div>
+                </SidebarInset>
+            </SidebarProvider>
         </NavigationProvider>
     )
 }

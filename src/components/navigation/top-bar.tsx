@@ -2,23 +2,18 @@
 
 import { useTheme } from "next-themes"
 import { useDir } from "@/components/dir-provider"
-import { Moon, Sun, Languages, User, Menu } from "lucide-react"
+import { Moon, Sun, Languages, User } from "lucide-react"
 import { useNavigation } from "./navigation-context"
+import { SidebarTrigger } from "@/components/animate-ui/components/radix/sidebar"
 
 export function TopBar() {
     const { theme, setTheme } = useTheme()
     const { isRtl, toggleRtl } = useDir()
-    const { isMobileMenuOpen, setMobileMenuOpen } = useNavigation()
 
     return (
         <header className="h-16 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-center justify-between px-6 shrink-0 z-10 w-full relative">
             <div className="flex items-center gap-4">
-                <button
-                    onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-                    className="md:hidden w-10 h-10 -ml-2 rounded-full flex items-center justify-center hover:bg-accent text-muted-foreground hover:text-foreground transition-colors"
-                >
-                    <Menu size={20} />
-                </button>
+                <SidebarTrigger className="-ml-1" />
                 {/* Placeholder for breadcrumbs or title */}
                 <span className="text-sm font-medium text-muted-foreground hidden sm:block">Dashboard Overview</span>
             </div>
