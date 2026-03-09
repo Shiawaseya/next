@@ -2,20 +2,100 @@
 
 import { useTheme } from "next-themes"
 import { useDir } from "@/components/dir-provider"
+import { usePathname } from "next/navigation"
+import Link from "next/link"
 import { Moon, Sun, Languages, User } from "lucide-react"
-import { useNavigation } from "./navigation-context"
 import { SidebarTrigger } from "@/components/animate-ui/components/radix/sidebar"
+import { Separator } from "@/components/ui/separator"
+import { navigationConfig } from "@/config/navigation"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 
 export function TopBar() {
     const { theme, setTheme } = useTheme()
-    const { isRtl, toggleRtl } = useDir()
+    const { toggleRtl } = useDir()
+    const pathname = usePathname()
+
+    const activeProgram = navigationConfig.find((program) => pathname.includes(`/${program.id}`)) ?? navigationConfig[0]
+
+    const matched = (() => {
+        if (!activeProgram) return { item: undefined as any, subItem: undefined as any }
+
+        let bestItem: any = undefined
+        let bestSubItem: any = undefined
+        let bestLen = -1
+
+        for (const item of activeProgram.items) {
+            if (item.href && (pathname === item.href || pathname.startsWith(item.href + "/"))) {
+                const len = item.href.length
+                if (len > bestLen) {
+                    bestItem = item
+                    bestSubItem = undefined
+                    bestLen = len
+                }
+            }
+
+            for (const subItem of item.subItems ?? []) {
+                if (subItem.href && (pathname === subItem.href || pathname.startsWith(subItem.href + "/"))) {
+                    const len = subItem.href.length
+                    if (len > bestLen) {
+                        bestItem = item
+                        bestSubItem = subItem
+                        bestLen = len
+                    }
+                }
+            }
+        }
+
+        return { item: bestItem, subItem: bestSubItem }
+    })()
+
+    const rootHref = activeProgram?.items?.[0]?.href ?? "/dashboard"
 
     return (
         <header className="h-16 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-center justify-between px-6 shrink-0 z-10 w-full relative">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
                 <SidebarTrigger className="-ml-1" />
-                {/* Placeholder for breadcrumbs or title */}
-                <span className="text-sm font-medium text-muted-foreground hidden sm:block">Dashboard Overview</span>
+                <Separator orientation="vertical" className="mr-2 h-4" />
+                <Breadcrumb>
+                    <BreadcrumbList>
+                        <BreadcrumbItem className="hidden md:block">
+                            <BreadcrumbLink asChild>
+                                <Link href={rootHref}>{activeProgram?.title || "Dashboard"}</Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+
+                        {matched.item && (
+                            <>
+                                <BreadcrumbSeparator className="hidden md:block" />
+                                <BreadcrumbItem>
+                                    {matched.subItem ? (
+                                        <BreadcrumbLink asChild>
+                                            <Link href={matched.item.href || "#"}>{matched.item.title}</Link>
+                                        </BreadcrumbLink>
+                                    ) : (
+                                        <BreadcrumbPage>{matched.item.title}</BreadcrumbPage>
+                                    )}
+                                </BreadcrumbItem>
+                            </>
+                        )}
+
+                        {matched.subItem && (
+                            <>
+                                <BreadcrumbSeparator className="hidden md:block" />
+                                <BreadcrumbItem>
+                                    <BreadcrumbPage>{matched.subItem.title}</BreadcrumbPage>
+                                </BreadcrumbItem>
+                            </>
+                        )}
+                    </BreadcrumbList>
+                </Breadcrumb>
             </div>
 
             <div className="flex items-center gap-3">

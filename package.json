@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/generate-navigation.mjs && next dev",
+    "build": "node scripts/generate-navigation.mjs && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate:nav": "node scripts/generate-navigation.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
