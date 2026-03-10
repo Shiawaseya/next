@@ -1,15 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { StarsBackground } from "@/components/animations/stars-background";
 import Image from "next/image";
+import { env } from "@/config/env";
 
 export default function LoginPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      router.push("/dashboard");
+    }
+  }, [router]);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,18 +29,34 @@ export default function LoginPage() {
     const username = formData.get("username");
     const password = formData.get("password");
 
-    // Simulated login delay
-    setTimeout(() => {
-      // In a real app, you would validate with your backend:
-      // const res = await fetch('/api/auth/login', { ... })
+    try {
+      const response = await fetch(`${env.apiUrl}/auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
 
-      if (username === "admin" && password === "admin") {
-        router.push("/dashboard");
-      } else {
-        setError("Invalid credentials. Try admin / admin");
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.message || "Login failed");
         setLoading(false);
+        return;
       }
-    }, 1000);
+
+      // Store token and user data
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      // Redirect to dashboard
+      router.push("/dashboard");
+    } catch (err) {
+      console.error("Login error:", err);
+      setError("Unable to connect to server. Please try again.");
+      setLoading(false);
+    }
   };
 
   return (

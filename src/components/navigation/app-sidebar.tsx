@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { Separator } from "@/components/ui/separator";
@@ -51,18 +51,41 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { navigationConfig } from "@/config/navigation";
 import Image from "next/image";
-import { motion } from "motion/react";
-
-const USER_DATA = {
-  name: "Skyleen",
-  email: "skyleen@example.com",
-  avatar:
-    "https://pbs.twimg.com/profile_images/1909615404789506048/MTqvRsjo_400x400.jpg",
-};
+import { useAuth } from "@/hooks/use-auth";
+import { env } from "@/config/env";
 
 export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
   const isMobile = useIsMobile();
   const pathname = usePathname();
+  const router = useRouter();
+  const { user, logout } = useAuth(false);
+
+  const handleLogout = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        // Call backend logout endpoint
+        await fetch(`${env.apiUrl}/auth/logout`, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
+      }
+    } catch (error) {
+      console.error("Logout error:", error);
+    } finally {
+      // Always clear local storage and redirect
+      logout();
+    }
+  };
+
+  // Get user initials for avatar fallback
+  const getUserInitials = () => {
+    if (!user?.email) return "U";
+    return user.email.substring(0, 2).toUpperCase();
+  };
 
   // Auto-detect active system from current pathname
   const activeProgram = React.useMemo(() => {
@@ -245,14 +268,17 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                   className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                 >
                   <Avatar className="h-8 w-8 rounded-lg">
-                    <AvatarImage src={USER_DATA.avatar} alt={USER_DATA.name} />
-                    <AvatarFallback className="rounded-lg">SK</AvatarFallback>
+                    <AvatarFallback className="rounded-lg">
+                      {getUserInitials()}
+                    </AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-semibold">
-                      {USER_DATA.name}
+                      {user?.employee_id || "User"}
                     </span>
-                    <span className="truncate text-xs">{USER_DATA.email}</span>
+                    <span className="truncate text-xs">
+                      {user?.email || "Not logged in"}
+                    </span>
                   </div>
                   <ChevronsUpDown className="ml-auto size-4" />
                 </SidebarMenuButton>
@@ -266,18 +292,16 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                 <DropdownMenuLabel className="p-0 font-normal">
                   <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                     <Avatar className="h-8 w-8 rounded-lg">
-                      <AvatarImage
-                        src={USER_DATA.avatar}
-                        alt={USER_DATA.name}
-                      />
-                      <AvatarFallback className="rounded-lg">SK</AvatarFallback>
+                      <AvatarFallback className="rounded-lg">
+                        {getUserInitials()}
+                      </AvatarFallback>
                     </Avatar>
                     <div className="grid flex-1 text-left text-sm leading-tight">
                       <span className="truncate font-semibold">
-                        {USER_DATA.name}
+                        {user?.employee_id || "User"}
                       </span>
                       <span className="truncate text-xs">
-                        {USER_DATA.email}
+                        {user?.email || "Not logged in"}
                       </span>
                     </div>
                   </div>
@@ -285,19 +309,8 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                   <DropdownMenuItem>
-                    <Sparkles />
-                    Upgrade to Pro
-                  </DropdownMenuItem>
-                </DropdownMenuGroup>
-                <DropdownMenuSeparator />
-                <DropdownMenuGroup>
-                  <DropdownMenuItem>
                     <BadgeCheck />
                     Account
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <CreditCard />
-                    Billing
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <Bell />
@@ -305,7 +318,7 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={handleLogout}>
                   <LogOut />
                   Log out
                 </DropdownMenuItem>
