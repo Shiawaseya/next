@@ -7,6 +7,8 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useDir } from "@/components/dir-provider";
 import { Sun, Moon, Languages } from "lucide-react";
+import { TypingText } from "../animate-ui/primitives/texts/typing";
+import Image from "next/image";
 
 export function HeroSection() {
   const { theme, setTheme } = useTheme();
@@ -40,9 +42,13 @@ export function HeroSection() {
 
       {/* Top Navigation / Controls */}
       <header className="absolute top-0 w-full p-6 flex justify-between items-center z-20">
-        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center font-bold text-primary text-xl backdrop-blur-sm">
-          B
-        </div>
+        <Image
+          src="/logo.png"
+          width={150}
+          height={500}
+          alt="n2a1"
+          preload={true}
+        />
 
         <div className="flex items-center gap-3">
           <button
@@ -87,7 +93,7 @@ export function HeroSection() {
           >
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20 backdrop-blur-md">
               <Sparkles size={16} />
-              <span>Next.js Dashboard Boilerplate</span>
+              <span>Neeco II Area 1</span>
             </span>
           </motion.div>
 
@@ -95,9 +101,10 @@ export function HeroSection() {
             variants={itemVariants}
             className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-8"
           >
-            Build faster with <br className="hidden sm:block" />
+            Multi System <br className="hidden sm:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/50">
-              beautiful interfaces
+              {/* beautiful interfaces */}
+              <TypingText text="Integration" />
             </span>
           </motion.h1>
 
@@ -125,14 +132,14 @@ export function HeroSection() {
                 className="transition-transform group-hover:translate-x-1"
               />
             </Link>
-            <a
+            {/* <a
               href="https://github.com/Gerald/anti"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-full border border-border bg-background/50 hover:bg-accent/50 backdrop-blur-md transition-colors"
             >
               View source
-            </a>
+            </a> */}
           </motion.div>
         </motion.div>
       </div>

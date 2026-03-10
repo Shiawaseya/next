@@ -1,12 +1,10 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import * as React from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-import {
-  Separator,
-} from '@/components/ui/separator';
+import { Separator } from "@/components/ui/separator";
 import {
   Sidebar,
   SidebarHeader,
@@ -21,12 +19,12 @@ import {
   SidebarMenuSub,
   SidebarMenuSubItem,
   SidebarMenuSubButton,
-} from '@/components/animate-ui/components/radix/sidebar';
+} from "@/components/animate-ui/components/radix/sidebar";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@/components/animate-ui/primitives/radix/collapsible';
+} from "@/components/animate-ui/primitives/radix/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -36,7 +34,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from '@/components/animate-ui/components/radix/dropdown-menu';
+} from "@/components/animate-ui/components/radix/dropdown-menu";
 import {
   AudioWaveform,
   BadgeCheck,
@@ -48,20 +46,18 @@ import {
   LogOut,
   Plus,
   Sparkles,
-} from 'lucide-react';
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from '@/components/ui/avatar';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { navigationConfig } from '@/config/navigation';
+} from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { navigationConfig } from "@/config/navigation";
+import Image from "next/image";
+import { motion } from "motion/react";
 
 const USER_DATA = {
-  name: 'Skyleen',
-  email: 'skyleen@example.com',
+  name: "Skyleen",
+  email: "skyleen@example.com",
   avatar:
-    'https://pbs.twimg.com/profile_images/1909615404789506048/MTqvRsjo_400x400.jpg',
+    "https://pbs.twimg.com/profile_images/1909615404789506048/MTqvRsjo_400x400.jpg",
 };
 
 export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
@@ -82,11 +78,38 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
   // Check if link is active based on pathname
   const isLinkActive = (href?: string) => {
     if (!href) return false;
-    return pathname === href || pathname.startsWith(href + '/');
+    return pathname === href || pathname.startsWith(href + "/");
+  };
+
+  const imageStyle = {
+    // borderRadius: "50%",
+    // border: "1px solid #fff",
   };
 
   return (
     <Sidebar collapsible="icon" {...props}>
+      {/* <SidebarHeader>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+            type: "spring",
+            bounce: 0.5,
+          }}
+          className="mx-auto bg-primary/10 text-primary rounded-2xl flex flex-col items-center justify-center font-bold text-xl mb-6 ring-1 ring-primary/20 backdrop-blur-md p-2"
+        >
+          <Image
+            src="/logo.png"
+            width={500}
+            height={500}
+            alt="n2a1"
+            preload={true}
+          />
+        </motion.div>
+      </SidebarHeader> */}
+
       <SidebarHeader>
         {/* System Switcher - Dynamic from navigationConfig */}
         <SidebarMenu>
@@ -111,7 +134,7 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
               <DropdownMenuContent
                 className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
                 align="start"
-                side={isMobile ? 'bottom' : 'right'}
+                side={isMobile ? "bottom" : "right"}
                 sideOffset={4}
               >
                 <DropdownMenuLabel className="text-xs text-muted-foreground">
@@ -123,7 +146,7 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                     asChild
                     className="gap-2 p-2"
                   >
-                    <Link href={system.items[0]?.href || '/dashboard'}>
+                    <Link href={system.items[0]?.href || "/dashboard"}>
                       <div className="flex size-6 items-center justify-center rounded-sm border">
                         <system.icon className="size-4 shrink-0" />
                       </div>
@@ -156,7 +179,7 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                       tooltip={item.title}
                       isActive={isActive}
                     >
-                      <Link href={item.href || '#'}>
+                      <Link href={item.href || "#"}>
                         {item.icon && <item.icon className="size-4" />}
                         <span>{item.title}</span>
                       </Link>
@@ -175,9 +198,7 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                 >
                   <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
-                      <SidebarMenuButton 
-                        isActive={isActive}
-                      >
+                      <SidebarMenuButton isActive={isActive}>
                         {item.icon && <item.icon className="size-4" />}
                         <span>{item.title}</span>
                         <ChevronRight className="ml-auto transition-transform duration-300 group-data-[state=open]/collapsible:rotate-90" />
@@ -189,12 +210,14 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                           const isSubActive = isLinkActive(subItem.href);
                           return (
                             <SidebarMenuSubItem key={subItem.title}>
-                              <SidebarMenuSubButton 
+                              <SidebarMenuSubButton
                                 asChild
                                 isActive={isSubActive}
                               >
-                                <Link href={subItem.href || '#'}>
-                                  {subItem.icon && <subItem.icon className="size-4" />}
+                                <Link href={subItem.href || "#"}>
+                                  {subItem.icon && (
+                                    <subItem.icon className="size-4" />
+                                  )}
                                   <span>{subItem.title}</span>
                                 </Link>
                               </SidebarMenuSubButton>
@@ -222,26 +245,21 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                   className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                 >
                   <Avatar className="h-8 w-8 rounded-lg">
-                    <AvatarImage
-                      src={USER_DATA.avatar}
-                      alt={USER_DATA.name}
-                    />
+                    <AvatarImage src={USER_DATA.avatar} alt={USER_DATA.name} />
                     <AvatarFallback className="rounded-lg">SK</AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-semibold">
                       {USER_DATA.name}
                     </span>
-                    <span className="truncate text-xs">
-                      {USER_DATA.email}
-                    </span>
+                    <span className="truncate text-xs">{USER_DATA.email}</span>
                   </div>
                   <ChevronsUpDown className="ml-auto size-4" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
-                side={isMobile ? 'bottom' : 'right'}
+                side={isMobile ? "bottom" : "right"}
                 align="end"
                 sideOffset={4}
               >
@@ -252,9 +270,7 @@ export const AppSidebar = (props: React.ComponentProps<typeof Sidebar>) => {
                         src={USER_DATA.avatar}
                         alt={USER_DATA.name}
                       />
-                      <AvatarFallback className="rounded-lg">
-                        SK
-                      </AvatarFallback>
+                      <AvatarFallback className="rounded-lg">SK</AvatarFallback>
                     </Avatar>
                     <div className="grid flex-1 text-left text-sm leading-tight">
                       <span className="truncate font-semibold">
